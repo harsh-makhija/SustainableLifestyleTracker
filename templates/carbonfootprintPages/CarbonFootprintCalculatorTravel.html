@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+<style>
+    body{
+        background-color: white;
+
+    }
+</style>
+{% block content %}
+    <div class="logHero">Carbon Footprint Calculator</div>
+    <body>
+    <form class="CreateLog" method="POST">
+        {{ form.csrf_token() }}
+        <section class="input">
+            {{ form.transportation.label }}
+            {{ form.transportation(class="input", placeholder="Means of travel ") }}
+        </section>
+        <section class="input">
+            {{ form.distance.label }}
+            {{ form.distance(class="input", placeholder="Enter distance travelled to the nearest 5km") }}
+        </section>
+        <section class="input">
+            {{ form.toAndFromWork.label }}
+            {{ form.toAndFromWork(class="input", placeholder="do you travel to and from work" )}}
+        </section>
+        <section class="input">
+            {{ form.daysTravelled.label }}
+            {{ form.daysTravelled(class="input", placeholder="How many days a week do you work") }}
+        </section>
+        <section class="input">
+            {{ form.weeksWorked.label }}
+            {{ form.weeksWorked(class="input", placeholder="How many weeks a year do you work") }}
+        </section>
+        <div class="TransportSubmit">
+                    {{ form.submit(class="button") }}
+        </div>
+
+        <h1>Travel emissions {{ emissions }}KG/co2 per year</h1>
+            <div class="NextButton">
+            <a href="{{ url_for('carbonfootprint.overnight_carbon_footprint_calculator') }}" class="button" style="color: white">Next</a>
+    </div>
+    </form>
+
+
+
+
+
+
+
+
+    </body>
+{% endblock %}

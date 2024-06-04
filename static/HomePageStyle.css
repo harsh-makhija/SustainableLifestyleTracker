@@ -1,0 +1,1064 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap'); /* Global styles */
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #333;
+  background-color: black;
+}
+
+/* Header styles */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+header a{
+    text-decoration: none;
+}
+
+header{
+    padding: 0 20px;
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#brand:hover{
+    transform: scale(1.4);
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
+
+ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul a{
+    color: white;
+}
+
+ul li{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+ul li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+@media only screen and (max-width: 450px){
+    /* NAV BAR */
+    #brand{
+        display: none;
+    }
+
+    ul li{
+        margin: 0;
+    }
+
+    /* HOME PAGE */
+@media only screen and (max-width: 450px) {
+        .MainPageMainText{
+            transform:scale(0.6);
+            transform-origin: 0 0;
+}
+    }
+    .hero{
+        margin-bottom: 150px;
+    }
+
+     .MainPageSubText{
+      margin-top: 60px;
+    }
+
+     .MainPageButton{
+         margin-top: 90px;
+         width:20%;
+         box-sizing: content-box;
+         text-align: center;
+     }
+
+     .features ul{
+         flex-direction: column;
+         column-gap: 20px;
+     }
+
+     .features li{
+         column-gap: 20px;
+     }
+
+
+     .testimonial{
+         display: none;
+     }
+     .testimonials h2{
+         display:none;
+     }
+
+    .logHero{
+        scale: .7;
+    }
+
+    .logServices ul{
+        flex-direction: column;
+        height: 10vh;
+    }
+
+}
+
+
+/* Hero section styles */
+.hero {
+    background-position: right;
+    background-size: contain ;
+    background-repeat: no-repeat;;
+    background-color: black;
+}
+.hero img{
+    max-width: 50%;
+    position: relative;
+    left: 50%;
+
+}
+.MainPageMainText{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+}
+
+.MainPageSubText {
+    color: white;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.MainPageButton {
+    background-color: #fff;
+    color: black;
+    padding: 10px 10px;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-decoration: grey;
+    width: 10%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+
+
+}
+.MainPageButton:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.aboutMainText{
+    color: white;
+    margin-top: 40px;
+    font-size: 35px;
+
+}
+
+.aboutContainer{
+
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: black;
+    border-radius: 12px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+    margin-top: 50px;
+
+
+}
+
+.aboutContainer p{
+    color: white;
+}
+/* Features section styles */
+.features {
+  background: white;
+  padding-top: 15px;
+  text-align: center;
+}
+.features h2 {
+  color: black;
+  font-size: 36px;
+
+}
+.features ul {
+    height:200px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.features li {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px;
+}
+.features h3 a {
+    color: black;
+    font-size: 20px;
+
+}
+
+/* about style */
+.about{
+  margin-top: 50px;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,255) 0%, rgba(0,0,0,1) 92%);
+  text-align: center;
+  text-decoration: white;
+}
+.about h2{
+  color: white;
+}
+.aboutContainer{
+  display: flex;
+  padding: 50px;
+}
+
+/* Testimonials section styles */
+.testimonials {
+  background: rgb(3,104,150);
+  background: linear-gradient(0deg, rgba(3,104,150,1) 8%, rgba(255,255,255,1) 92%);
+  padding: 50px 0;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.testimonial {
+  background-color: #fff;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+.testimonial p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.testimonial .author {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Register Page CSS */
+  /* Register form box */
+
+
+@keyframes RegisterFormAnimation {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+  .RegisterFormContainer {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    text-align: center;
+  }
+
+    .RegisterFormContainer h1 {
+        text-align: center;
+        margin: 0 0 20px 0;
+        color: black;
+    }
+
+    .RegisterFormContainer input {
+      background: transparent;
+        color: black;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 2px solid #fffefe;
+      font-size: 1.2em;
+    }
+
+    /* Highlight over button when cursor is hovering over */
+    .RegisterFormContainer input:focus {
+      outline: none;
+      border-bottom: 2px solid black;
+    }
+
+    .RegisterFormContainer button {
+        padding: 15px;
+        background-color: grey;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+        border: transparent;
+    }
+
+    .RegisterFormContainer button:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    @media only screen and (max-width: 450px){
+      .RegisterFormContainer{
+          font-size: 11px;
+          width: 200px;
+          left: 20%;
+      }
+    }
+
+/* Login Form CSS */
+
+  .LoginFormContainer {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+
+  }
+
+    .LoginFormContainer h1 {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    .LoginFormContainer input {
+      background: transparent;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 2px solid #333;
+      font-size: 1.2em;
+    }
+
+    .LoginFormContainer input:focus {
+      outline: none;
+      border-bottom: 2px solid #4caf50;
+    }
+
+    .LoginFormContainer button {
+      width: 100px;
+      margin-left: 175px;
+      margin-top: 5px;
+      padding: 15px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .LoginFormContainer button:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+@media only screen and (max-width: 450px){
+    .LoginFormContainer {
+        font-size: 11px;
+        width: 200px;
+        left: 20%;
+
+    }
+    .LoginFormContainer h1 {
+        font-size: 11px;
+    }
+    .recaptcha{
+        transform:scale(0.55);
+        transform-origin:0 0;
+    }
+    .LoginFormContainer p2{
+        font-size: 11px;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
+
+/* Reset Password CSS */
+  /* Reset Password User input form*/
+  .ResetPasswordFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 12px;
+      border: 1px solid white;
+    padding: 30px 40px;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+  }
+
+    .ResetPasswordFormContainer h1 {
+      color: white;
+    }
+
+    .ResetPasswordFormContainer input {
+      width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+      background: transparent;
+      border: none;
+      border-bottom: 4px solid white;
+      font-size: 1.2em;
+      color: white;
+      outline: none;
+    }
+
+    .ResetPasswordFormContainer button {
+      width: 100px;
+      margin: 20px 0;
+      padding: 10px;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .ResetPasswordFormContainer button:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+/* Error pages CSS */
+
+
+.TextDisplay{
+  background-image: url("/static/ImageFiles/ErrorPage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-radius: 50px;
+  position: relative;
+  top: 40%;
+  left: 37.5%;
+  /* Generated */
+  -webkit-box-shadow: 0 0 100px 5px rgba(48,187,242,0.8);
+  -moz-box-shadow: 0 0 100px 5px rgba(48,187,242,0.8);
+  box-shadow: 0 0 100px 5px rgba(48,187,242,0.8);
+}
+
+  .TextDisplay h1{
+    text-shadow: -0.05em -0.01em 0.1em #ffffff;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: black;
+  }
+ /* Contact Form CSS */
+
+.ContactTitle{
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+
+}
+.ContactHero{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #ffffff;
+  padding: 50px 0;
+}
+
+      .form-container {
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 42%;
+          border-style: solid;
+          border-color: white;
+          border-radius: 5px;
+      }
+.ContactButton{
+    margin-left: 40px;
+      margin-top: 5px;
+      padding: 15px;
+      background-color: transparent;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-bottom: 5px solid white;
+}
+.ContactButton:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid #4caf50;
+}
+
+.ContactMessage{
+    text-align: center;
+    color: white;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+}
+      .ContactSubmit:hover {
+        background-color: #3e8e41;
+      }
+      .HomepageLink a{
+        color: white;
+          display: flex;
+          flex-direction: column;
+        text-decoration: none;
+          text-align: center;
+        margin-left: 15px;
+          padding: 10px;
+      }
+      .HomepageLink a:hover{
+        color: #4caf50;
+      }
+
+/* Account Page CSS */
+
+.accountHeading{
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.accountHeading h1{
+    color: white;
+    text-align: center;
+}
+
+.AccountTable{
+    color: white;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 37.5%;
+    text-align: center;
+}
+.AccountTable h1{
+    padding: 20px;
+}
+.AccountTable h2{
+    padding: 20px;
+}
+.AccountTable h4{
+    padding: 20px;
+}
+.AccountTable a{
+    padding: 40px;
+    color: black;
+}
+
+@media only screen and (max-width: 450px) {
+    .accountHeading{
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        left: 30%;
+        padding: 5px;
+    }
+    .AccountTable{
+        font-size: 13px;
+        width: 175px;
+        left: 20%;
+    }
+    .AccountTable h1{
+        font-size: 15px;
+        padding: 5px;
+    }
+    .AccountTable h2{
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/* Delete Account Page*/
+.DeleteAccountContainer{
+    color: white;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    right: 40%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 50%;
+    text-align: center;
+}
+
+.DeleteAccountContainer h1{
+    padding: 20px;
+}
+.DeleteAccountContainer button{
+    background: transparent;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 2px solid #333;
+      font-size: 1.2em;
+}
+.DeleteAccountContainer input{
+          width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+      background: transparent;
+      border: none;
+      border-bottom: 4px solid white;
+      font-size: 1.2em;
+      color: white;
+      outline: none;
+}
+/* Mobile view delete account */
+@media only screen and (max-width: 450px) {
+    .DeleteAccountContainer{
+        position: absolute;
+        right: 25%;
+    }
+    .DeleteAccountContainer h1{
+        scale: 0.7;
+    }
+
+}
+
+
+/* Exercise Log CSS*/
+
+.logHero{
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    }
+
+.logMessages{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.logServices {
+     background: rgb(234,237,238);
+    background: linear-gradient(0deg, rgba(234,237,238,1) 0%, rgba(0,0,0,1) 100%);
+    height: 400px;
+    text-align: center;
+}
+
+    .logServices ul{
+        color: white;
+        list-style: none;
+        margin: 15px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logServices li{
+        flex: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: black;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px;
+}
+
+
+.CreateLogHero{
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+
+
+}
+.CreateLog {
+    /* Generated */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    /* */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 70vh;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.CreateLog a{
+    color: blueviolet;
+    text-align: center;
+}
+
+.CreateLog .input {
+    position: center;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex-direction: column;
+    column-gap: 2000px;
+}
+
+
+.CreateLog .textarea{
+    position: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.CreateLog .button {
+    /* https://cssgradient.io/gradient-backgrounds/ */
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.CreateLog .button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+      /* View Logs Page CSS */
+
+.ViewLogpage {
+    background: gray;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    position: absolute;
+    right: 27.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+
+    }
+
+.ViewLogpage a{
+    text-align: center;
+}
+
+.ViewLogpage h2 {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.ViewLogpage th, td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.returnLog a{
+    color: black;
+    text-align: center;
+}
+
+/* Carbon footprint Calculator pages style */
+
+
+.FootprintMainSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.carbonfootprint-header h1{
+    color: white;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child .information{
+    width: 300px; /* Adjust the width as needed */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    position: absolute;
+    right: 13%;
+    top: 40%;
+}
+
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.footprintServices {
+    text-align: center;
+}
+
+    .footprintServices ul{
+        color: white;
+        list-style: none;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 20px;
+    }
+
+    .footprintServices li{
+        flex: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: black;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px;
+}
+
+
+.footprintDetailsHeader{
+    font-size: 2em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+    .flex-child{
+        padding: 10px;
+    }
+    .flex-child h3{
+        text-align: center;
+        font-size: 12px;
+        padding-bottom: 2px;
+    }
+    .flex-child p{
+        text-align: center;
+        font-size: 11px;
+    }
+    .carbonfootprint-header h1{
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* Services page CSS */
+.services h1{
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.services ul{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    background: grey;
+    padding: 20px;
+}
+.services p{
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/*Calculation Information Page*/
+
+.CalculationInformation{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+
+.CalculationInformation h1{
+    padding: 10px;
+}
+
+/* View Messages Page */
+.MessageTable{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+.MessageTable th{
+    padding: 10px;
+}
+
+.ViewMessages h2{
+    text-align: center;
+}
+
+/* Calculate Footprint  Page */
+
+.NextButton a{
+    color: white;
+    text-align: center;
+    float: right;
+    position: relative;
+    right: 30%;
+    top: 40%;
+}
+
+.TransportSubmit{
+    text-align: center;
+}
+
+/* Food Calculation Page */
+
+.BackButton{
+    text-align: center;
+    padding: 20px;
+    right: 10%;
+}
+
+/* Carbon Footprint Logs */
+.CarbonFootprintTable table {
+    background: gray;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    position: absolute;
+    right: 27.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+.CarbonFootprintTable th, td {
+  padding: 10px;
+}
+
+.CarbonFootprintTitle h1{
+    text-align: center;
+    padding: 20px;
+    color: white;
+}

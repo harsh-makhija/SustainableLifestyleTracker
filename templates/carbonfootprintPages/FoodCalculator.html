@@ -1,0 +1,47 @@
+<style>
+    body{
+        background-color: white;
+
+    }
+</style>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <body>
+
+        <form class="CreateLog" method="POST">
+            {{ form.csrf_token() }}
+            <h1>Enter in grams how much of each item you buy per week</h1>
+            <section class="input">
+                {{ form.beef.label }}
+                {{ form.beef(class="input", placeholder="How many grams of beef do you purchase a week?") }}
+            </section>
+            <section class="input">
+                {{ form.lamb.label }}
+                {{ form.lamb(class="input", placeholder="How many grams of lamb do you purchase a week?") }}
+            </section>
+            <section class="input">
+                {{ form.pork.label }}
+                {{ form.pork(class="input", placeholder="How many grams of pork do you purchase a week?") }}
+            </section>
+            <section class="input">
+                {{ form.cheese.label }}
+                {{ form.cheese(class="input", placeholder="How many grams of cheese do you purchase a week?") }}
+            </section>
+            <section class="input">
+                {{ form.fish.label }}
+                {{ form.fish(class="input", placeholder="How many grams of fish do you purchase a week?") }}
+            </section>
+            <section class="input">
+                {{ form.poultry.label }}
+                {{ form.poultry(class="input", placeholder="How many grams of poultry do you purchase a week?") }}
+            </section>
+            {{ form.submit(class="button") }}
+            <h1>Food emissions {{ emissions }} KG/co2 per year</h1>
+            <div class="BackButton">
+            <a href="{{ url_for('carbonfootprint.overnight_carbon_footprint_calculator') }}" class="button" style="color: white">Back</a>
+    </div>
+        </form>
+    </body>
+{% endblock %}

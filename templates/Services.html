@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "services">
+    <h1 id="Services">Services</h1>
+        <ul>
+            <li>
+                <h3><a href="{{ url_for ('carbonfootprint.carbonfootprint_view') }}">Carbon Footprint Calculator</a></h3>
+                <p>Through a series of questions, see what your carbon/greenhouse gas emissions are relative to the average uk citizen.</p>
+            </li>
+            <li>
+                <h3><a href="{{ url_for ('log.log_main') }}"> Fitness Tracker</a></h3>
+                <p>Plan, Track and View your workouts and exercise routines</p>
+            </li>
+        </ul>
+</div>
+
+{% endblock %}

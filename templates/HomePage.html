@@ -1,0 +1,54 @@
+<title>Welcome!</title>
+{% extends "base.html" %}
+ {% block content %}
+     <body>
+        <main>
+            <section class="hero">
+                <img src="/static/ImageFiles/urf.png" alt="Earth">
+                <div class="MainPageMainText"> Sustainable Lifestyle Tracker</div>
+                <div class="MainPageSubText">All you need to create and maintain a sustainable lifestyle for yourself and the planet!</div>
+                <div class="MainPageButton">Learn More</div>
+            </section>
+            <section class="about">
+                <div class="aboutMainText">About Us</div>
+                <div class="aboutContainer">
+                    <p>What we do. We aim to bridge the gap between a susatainable lifestyle for you and a sustainable environment for others.
+                        We aim to deliver a sustainable development lifestyle tracker web application that will allow users to track and
+                        measure their daily activities and the impact this has on the environment. The application will include multiple
+                        features that cover different aspects of a sustainable lifestyle such as a carbon footprint tracker,
+                        fitness tracker and a waste management section.</p>
+                </div>
+            </section>
+            <section class="features">
+              <h2 id="Services">Services</h2>
+                <ul>
+                    <li>
+                        <h3><a href="{{ url_for ('carbonfootprint.carbonfootprint_view') }}">Carbon Footprint Calculator</a></h3>
+                        <p>Through a series of questions, see what your carbon/greenhouse gas emissions are relative to the average uk citizen.</p>
+                    </li>
+                    <li>
+                        <h3><a href="{{ url_for ('log.log_main') }}"> Fitness Tracker</a></h3>
+
+                        <p>Plan, Track and View your workouts and exercise routines</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="testimonials">
+                <h2>Why use our service?</h2>
+                <div class="testimonial">
+                    <p>Every year, the average UK citizen emits 12.7 tonnes of CO2.(That's the equivalent of driving around the world once!)</p>
+                    <p class="author">- John Doe, CEO of XYZ Corp</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis sapien id erat imperdiet hendrerit."</p>
+                    <p class="author">- Team 27 </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Team 27</p>
+        </footer>
+     </body>
+{% endblock %}
+

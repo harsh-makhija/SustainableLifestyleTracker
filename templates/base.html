@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/HomePageStyle.css">
+</head>
+<body>
+<header>
+        <div id="brand">Team 27</div>
+    <nav>
+        <ul>
+            {% if current_user.is_authenticated and current_user.role == 'user'%}
+                <li><a href="{{ url_for('main')}}">Home</a></li>
+                <li><a href="{{ url_for('services')}}">Services</a></li>
+                <li><a href="{{ url_for('users.account')}}">Account</a></li>
+                <li><a href="{{ url_for('users.contact')}}">Contact</a></li>
+                <li><a href="{{ url_for('users.logout')}}">Logout</a></li>
+            {% elif current_user.is_authenticated and current_user.role == 'admin'%}
+                <li><a href="{{ url_for('main')}}">Home</a></li>
+                <li><a href="{{ url_for('services')}}">Services</a></li>
+                <li><a href="{{ url_for('users.account')}}">Account</a></li>
+                <li><a href="{{ url_for('users.contact')}}">Contact</a></li>
+                <li><a href="{{ url_for('users.logout')}}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('main')}}">Home</a></li>
+                <li><a href="{{ url_for('services')}}">Services</a></li>
+                <li><a href="{{ url_for('users.login')}}">Login</a></li>
+                <li><a href="{{ url_for('users.register')}}">Sign up</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+</html>

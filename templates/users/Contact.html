@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+        <main>
+            <section class="ContactTitle"> Contact Us</section>
+            <div class="HomepageLink">
+                <a href="{{ url_for('main') }}">Go to Homepage</a>
+            </div>
+
+            <section class="ContactHero">
+            </section>
+            <div class="form-container">
+                <form class="ContactForm" method="POST">
+                    {{ form.message(class="TextArea", placeholder="Enter Message Here") }}
+                        {{ form.submit(class="ContactButton") }}
+
+                </form>
+            </div>
+        </main>
+    </body>
+
+    <div class="ContactMessage">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    </div>
+
+{% endblock %}

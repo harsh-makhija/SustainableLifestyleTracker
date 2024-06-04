@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+    <body>
+    <div class="CreateLogHero"> CREATE LOG</div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <form class="CreateLog" method="POST">
+            {{ form.csrf_token }}
+            <a href="{{ url_for('log.log_main') }}">Back To Exercise Log</a>
+            <section class="input">
+                {{ form.exercise_type.label }}
+                {{ form.exercise_type(class="input", placeholder="Exercise Type:", style="color:black") }}
+                {% for error in form.exercise_type.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </section>
+            <section class="input">
+                {{ form.intensity.label }}
+                {{ form.intensity(class="input", placeholder="Intensity:", style="color:black") }}
+                {% for error in form.intensity.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </section>
+
+            <section class="input">
+                {{ form.duration.label }}
+                {{ form.duration(class="input", placeholder="Duration:", style="color:black") }}
+                {% for error in form.duration.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </section>
+
+            <section class="input">
+                {{ form.exercise_date.label }}
+                {{ form.exercise_date(class="input", placeholder="Date:", style="color:black") }}
+                {% for error in form.exercise_date.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </section>
+
+            <section class="textarea">
+                {{ form.comments.label }}
+                {{ form.comments(class="input", placeholder="Comments", style="color:black") }}
+                {% for error in form.comments.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </section>
+            {{ form.submit(class="button") }}
+        </form>
+    </body>
+{% endblock %}

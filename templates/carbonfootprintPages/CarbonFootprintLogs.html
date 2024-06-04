@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="CarbonFootprintTitle">
+        <h1>Carbon Footprint Logs</h1>
+    </div>
+    <div class="CarbonFootprintTable">
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Transport Value</th>
+                <th>Food Value</th>
+                <th>Electrical Value</th>
+                <th>Final Value</th>
+            </tr>
+            {% for log in logs %}
+                <tr>
+                    <td>{{ log.id }}</td>
+                    <td>{{ log.transportval }}</td>
+                    <td>{{ log.foodval }}</td>
+                    <td>{{ log.electricalval }}</td>
+                    <td>{{ log.finalval }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

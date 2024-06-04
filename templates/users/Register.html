@@ -1,0 +1,57 @@
+<style>
+    body{
+        background-image: url("/static/ImageFiles/MoonHD.jpg");
+        background-size: 300px 300px;
+        background-repeat: no-repeat;
+        background-position-x: 950px;
+        background-position-y: 25px;
+    }
+</style>
+{% extends "base.html" %}
+{% block content %}
+    <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}. Go to <a href="{{ url_for('users.login') }}">login page</a>.
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form class="RegisterFormContainer"  method="post">
+        <h1>REGISTER</h1>
+        <div class="input">
+            {{form.csrf_token() }}
+            {{ form.email(class="input", placeholder="Email") }}
+            {% for error in form.email.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.firstname(class="input", placeholder="Firstname") }}
+            {% for error in form.firstname.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.lastname(class="input", placeholder="Surname") }}
+            {% for error in form.lastname.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.password(class="input", placeholder="Password") }}
+            {% for error in form.password.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.confirm_password(class="input", placeholder="Confirm Password") }}
+            {% for error in form.email.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        <button type="submit">{{ form.submit }}</button>
+    </form>
+  </body>
+
+{% endblock %}

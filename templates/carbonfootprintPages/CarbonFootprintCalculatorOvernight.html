@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+    <title>Overnight Choices Carbon emissions</title>
+    <body>
+    <form class="CreateLog" method="POST" style="margin-top: 20px">
+        {{ form.csrf_token() }}
+        <section class="input">
+            {{ form.userRegion.label}}
+            {{ form.userRegion(class="input") }}
+        </section>
+        <section class="input">
+            {{ form.houseSize.label }}
+            {{ form.houseSize(class="input") }}
+        </section>
+        <section class="input">
+            {{ form.overnightCharge.label }}
+            {{ form.overnightCharge(class="input")}}
+        </section>
+        <section class="input">
+            {{ form.hoursToChargeDevice.label }}
+            {{ form.hoursToChargeDevice(class="input") }}
+        </section>
+        <section class="input">
+            {{ form.hoursSleptAverage.label }}
+            {{ form.hoursSleptAverage(class="input") }}
+        </section>
+        <section class="input">
+            {{ form.lightsLeftOn.label }}
+            {{ form.lightsLeftOn(class="input") }}
+        </section>
+        <section class="input">
+            {{ form.winterHeating.label }}
+            {{ form.winterHeating(class="input") }}
+        </section>
+        {{ form.submit(class="button") }}
+         <h1>overnight {{ emissions }}KG/co2 per year</h1>
+         <div class="NextButton">
+            <a href="{{ url_for('carbonfootprint.carbon_footprint_food_calculator') }}" class="button" style="color: white">Next</a>
+         </div>
+         <div class="BackButton">
+            <a href="{{ url_for('carbonfootprint.carbon_footprint_calculator_transport') }}" class="button" style="color: white">Back</a>
+    </div>
+
+    </form>
+
+
+
+    </body>
+{% endblock %}

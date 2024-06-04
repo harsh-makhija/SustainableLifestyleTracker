@@ -1,0 +1,23 @@
+<style>
+    body{
+        background: linear-gradient(165deg, #000000, #4e89ab);
+        background-size: 400% 400%;
+        animation: ErrorPage 30s ease infinite;
+    }
+
+    @keyframes ErrorPage {
+    0%{background-position:0% 74%}
+    50%{background-position:100% 27%}
+    100%{background-position:0% 74%}
+    }
+</style>
+
+{% extends "base.html" %}
+{% block content %}
+    <title>Bad Request Error</title>
+    <body>
+    <section class="TextDisplay">
+        <h1>400: Bad Request Error</h1>
+    </section>
+    </body>
+{% endblock %}

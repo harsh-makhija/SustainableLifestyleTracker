@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <body>
+    <div class="carbonfootprint-header">
+        <h1>{{ name }}'s Carbon Footprint</h1>
+    </div>
+    <div class="flex-container">
+
+  <div class="flex-child">
+    <div class="footprintServices" style=" background: rgb(131,58,180); background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%); ">
+    <ul>
+        <li>
+            <h3><a href="{{ url_for ('carbonfootprint.carbon_footprint_calculator_transport') }}">Carbon Footprint Calculator</a></h3>
+            <p>Calculate your carbon emissions through a series of questions relating to your daily life</p>
+        </li>
+        <li>
+            <h3><a href="{{ url_for ('carbonfootprint.carbon_footprint_logs') }}">View Previous</a></h3>
+            <p>View the previous emission totals from your account - Must have an account</p>
+        </li>
+        <li>
+            <h3><a href="{{ url_for ('carbonfootprint.how_we_calculate') }}">How we calculate</a></h3>
+            <p>View the resources we use and a breakdown of the calculations for each questions</p>
+        </li>
+    </ul>
+</div>
+  </div>
+
+  <div class="flex-child" style=" background: rgb(250,27,27); background: linear-gradient(90deg, rgba(250,27,27,1) 1%, rgba(185,5,247,1) 100%);">
+    <div class="footprintDetailsHeader">What were about</div>
+      <section class="information">We aim to gauge the carbon that users are emitting based on a series of questions that users will know the
+          answers to intuitively. While many calculators ask for the specific metrics of yearly travel etc, our calculator is easy to use!</section>
+  </div>
+
+</div>
+
+
+    </body>
+{% endblock %}

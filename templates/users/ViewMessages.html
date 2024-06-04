@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if current_user.role == "admin" %}
+        <div class="logHero">{{ name }}'s Entries</div>
+        <div class="ViewMessages">
+            <h2 style ="color:white;">View Messages</h2>
+            <div class="returnLog">
+                <a href="{{ url_for('log.log_main') }}">Go to Exercise Log</a>
+            </div>
+            {% if messages %}
+                <div class="field">
+                    <table class="MessageTable">
+                        <tr>
+                            <th>Entry_num</th>
+                            <th>Message</th>
+                        </tr>
+                        {% for message in messages %}
+                            <tr>
+                                <td>{{ message.entry_num}}</td>
+                                <td>{{ message.message }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endif %}
+        </div>
+    {% else %}
+        <p>You must be an admin to view this page.</p>
+    {% endif %}
+{% endblock %}

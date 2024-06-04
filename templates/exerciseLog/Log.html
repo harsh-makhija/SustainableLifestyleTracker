@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+<style>
+    .body{
+        background: white;
+    }
+</style>
+
+{% block content %}
+
+<body>
+
+<div class="logHero">{{ name }}'s Exercise Log</div>
+ {% with messages = get_flashed_messages() %}
+     {% if messages %}
+         <section class="logMessages">
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+         </section>
+        {% endif %}
+{% endwith %}
+<div class="logServices">
+    <ul>
+        <li>
+            <h3><a href="{{ url_for('log.view_log')}}">View Logs</a></h3>
+        </li>
+        <li>
+            <h3><a href="{{ url_for('log.create_log')}}">Create Log</a></h3>
+        </li>
+        <li>
+            <h3><a href="{{ url_for('log.delete_log')}}">Delete All Logs</a></h3>
+        </li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}
