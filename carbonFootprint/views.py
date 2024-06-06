@@ -47,11 +47,7 @@ def how_we_calculate():
 @carbonfootprint_blueprint.route("/carbonfootprint/CarbonFootprintCalculator", methods=['GET', 'POST'])
 @login_required
 def carbon_footprint_calculator_transport():
-    """
-    Developed by Matthew
-        This function renders the form for calculating emissions based on travel to work
-    """
-    # Displays the transport form
+
     form = CarbonFootprintTransportForm()
 
     # Dictionary to store the values of the different transport types & their emission values
@@ -111,10 +107,7 @@ def carbon_footprint_calculator_transport():
 @carbonfootprint_blueprint.route("/carbonfootprint/FoodCalculator", methods=['GET', 'POST'])
 @login_required
 def carbon_footprint_food_calculator():
-    """
-    Developed by Harsh
-        This function renders the form and calculates carbon emissions based on how much meat a user buys a week
-    """
+
     form = CarbonFootprintFoodForm()
     # Dictionary for Carbon emissions values of different foods.
     # Source: https://www.science.org/doi/10.1126/science.aaq0216
@@ -155,10 +148,7 @@ def carbon_footprint_food_calculator():
 @carbonfootprint_blueprint.route("/carbonfootprint/CarbonFootprintCalculatorOvernight", methods=['GET', 'POST'])
 @login_required
 def overnight_carbon_footprint_calculator():
-    """
-    Developed by Matthew
-           This function renders the form and calculates carbon emissions based on choices made overnight
-       """
+
     form = CarbonFootprintOvernightForm()
 
     # Dictionary of Regions in England and their carbon (g/co2) intensity per Kwh
@@ -250,10 +240,7 @@ def overnight_carbon_footprint_calculator():
 @carbonfootprint_blueprint.route("/carbonfootprint/CarbonFootprintLogs", methods=['GET', 'POST'])
 @login_required
 def carbon_footprint_logs():
-    """
-    Developed By matthew
-    :return: User's values for carbon emissions
-    """
+
     co2_values = Co2Values.query.filter_by(email=current_user.email).all()
     co2Values = Co2Values.query.get(current_user.id)
     transport = co2Values.transportval
