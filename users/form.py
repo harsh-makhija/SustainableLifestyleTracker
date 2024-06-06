@@ -73,7 +73,6 @@ class ExerciseLogForm(FlaskForm):
         ('running', 'Running'),
         ('swimming', 'Swimming'),
         ('cycling', 'Cycling'),
-        # Add more types of exercise here...
     ], validators=[DataRequired()])
 
     entry_num = IntegerField('Entry')
@@ -86,7 +85,6 @@ class ExerciseLogForm(FlaskForm):
         ('light', 'Light'),
         ('moderate', 'Moderate'),
         ('intense', 'Intense'),
-        # Add more levels of intensity here...
     ], validators=[DataRequired()])
     exercise_date = DateField('Exercise Date', format='%Y-%m-%d', validators=[DataRequired()])
     comments = StringField(validators=[DataRequired()])
