@@ -3,9 +3,7 @@ from wtforms import SubmitField, IntegerField, SelectField
 from wtforms.validators import DataRequired, NumberRange
 
 class CarbonFootprintTransportForm(FlaskForm):
-    """
-    Developed by Matthew
-    """
+
     # mode of transport
     transportation = SelectField('Transportation', choices=['car petrol', 'car diesel', 'car electric', 'bus', 'train'],
                                  validators=[DataRequired()])
@@ -24,9 +22,7 @@ class CarbonFootprintTransportForm(FlaskForm):
 
 
 class CarbonFootprintFoodForm(FlaskForm):
-    """
-    Developed by Afa
-    """
+
     numbers = [(str(i), str(i)) for i in range(0, 2001, 100)]
 
     beef = SelectField('Beef', choices=numbers, validators=[DataRequired()])
@@ -45,9 +41,7 @@ class CarbonFootprintFoodForm(FlaskForm):
 
 
 class CarbonFootprintOvernightForm(FlaskForm):
-    """
-    Developed by Matthew
-    """
+
 
     # apply regional data for kwh energy from views.py
     userRegion = SelectField('What region of the UK are you from?',
